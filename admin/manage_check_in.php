@@ -9,8 +9,8 @@ if(isset($_GET['id'])){
 			$meta[$k]=$v;
 		}
 	}
-	$calc_days = abs(strtotime($meta['date_out']) - strtotime($meta['date_in'])) ; 
- $calc_days =floor($calc_days / (60*60*24)  );
+	$calc_month = abs(strtotime($meta['date_out']) - strtotime($meta['date_in'])) ; 
+ $calc_month =floor($calc_month / (60*60*24)  );
  $cat = $conn->query("SELECT * FROM room_categories");
 $cat_arr = array();
 while($row = $cat->fetch_assoc()){
@@ -60,7 +60,7 @@ while($row = $cat->fetch_assoc()){
 		</div>
 		<div class="form-group">
 			<label for="days">Days of Stay</label>
-			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($meta['date_in']) ? $calc_days: 1 ?>" required>
+			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($meta['date_in']) ? $calc_month: 1 ?>" required>
 		</div>
 	</form>
 </div>
