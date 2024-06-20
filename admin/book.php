@@ -2,8 +2,8 @@
 include('db_connect.php');
 	$rid = '';
 
-$calc_months = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ; 
-$calc_month=floor($calc_months / (60*60*24)  );
+$calc_month = abs(strtotime($_GET['out']) - strtotime($_GET['in'])) ; 
+$calc_month=floor($calc_month / (60*60*24)  );
 ?>
 <div class="container-fluid">
 	
@@ -30,7 +30,7 @@ $calc_month=floor($calc_months / (60*60*24)  );
 		</div>
 		<div class="form-group">
 			<label for="days">Days of Stay</label>
-			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($_GET['in']) ? $$calc_month
+			<input type="number" min ="1" name="days" id="days" class="form-control" value="<?php echo isset($_GET['in']) ? $calc_month: 1 ?>" required readonly>
 	</form>
 </div>
 <script>
