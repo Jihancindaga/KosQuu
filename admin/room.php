@@ -102,10 +102,10 @@ if(!isset($_SESSION["user"]))
                                             <label>Type Of Room *</label>
                                             <select name="troom"  class="form-control" required>
 												<option value selected ></option>
-                                                <option value="Superior Room">SUPERIOR ROOM</option>
-                                                <option value="Deluxe Room">DELUXE ROOM</option>
-												<option value="Guest House">GUEST HOUSE</option>
-												<option value="Single Room">SINGLE ROOM</option>
+                                                <option value="Kost Keluarga / Pasutri Lengkap">Kost Keluarga / Pasutri Lengkap</option>
+                                                <option value="Kost Exclusive Isian (KM dalam)">Kost Exclusive Isian (KM dalam)</option>
+												<option value="Kost Campur (2 Bed)">Kost Campur (2 Bed)</option>
+												<option value="Kost Kosongan (KM dalam)">Kost Kosongan (KM dalam)</option>
                                             </select>
                               </div>
 							  

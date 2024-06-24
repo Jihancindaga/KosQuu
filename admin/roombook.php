@@ -274,20 +274,20 @@ if(!isset($_SESSION["user"]))
 							$r = $r + 1;
 							$s = $rrow['type'];
 							$p = $rrow['place'];
-							if($s=="Superior Room" )
+							if($s=="Kost Keluarga / Pasutri Lengkap" )
 							{
 								$sc = $sc+ 1;
 							}
 							
-							if($s=="Guest House")
+							if($s=="Kost Campur (2 Bed)")
 							{
 								$gh = $gh + 1;
 							}
-							if($s=="Single Room" )
+							if($s=="Kost Kosongan (KM dalam)" )
 							{
 								$sr = $sr + 1;
 							}
-							if($s=="Deluxe Room" )
+							if($s=="Kost Exclusive Isian (KM dalam)" )
 							{
 								$dr = $dr + 1;
 							}
@@ -309,20 +309,20 @@ if(!isset($_SESSION["user"]))
 							$cr = $cr + 1;
 							$cs = $crow['troom'];
 							
-							if($cs=="Superior Room"  )
+							if($cs=="Kost Keluarga / Pasutri Lengkap"  )
 							{
 								$csc = $csc + 1;
 							}
 							
-							if($cs=="Guest House" )
+							if($cs=="Kost Campur (2 Bed)" )
 							{
 								$cgh = $cgh + 1;
 							}
-							if($cs=="Single Room" )
+							if($cs=="Kost Kosongan (KM dalam)" )
 							{
 								$csr = $csr + 1;
 							}
-							if($cs=="Deluxe Room" )
+							if($cs=="Kost Exclusive Isian (KM dalam)" )
 							{
 								$cdr = $cdr + 1;
 							}
@@ -340,7 +340,7 @@ if(!isset($_SESSION["user"]))
 						<table width="200px">
 							
 							<tr>
-								<td><b>Superior Room	 </b></td>
+								<td><b>Kost Keluarga / Pasutri Lengkap	 </b></td>
 								<td><button type="button" class="btn btn-primary btn-circle"><?php  
 									$f1 =$sc - $csc;
 									if($f1 <=0 )
@@ -355,7 +355,7 @@ if(!isset($_SESSION["user"]))
 								?> </button></td> 
 							</tr>
 							<tr>
-								<td><b>Guest House</b>	 </td>
+								<td><b>Kost Campur (2 Bed)</b>	 </td>
 								<td><button type="button" class="btn btn-primary btn-circle"><?php 
 								$f2 =  $gh -$cgh;
 								if($f2 <=0 )
@@ -369,7 +369,7 @@ if(!isset($_SESSION["user"]))
 								?> </button></td> 
 							</tr>
 							<tr>
-								<td><b>Single Room	 </b></td>
+								<td><b>Kost Kosongan (KM dalam)</b></td>
 								<td><button type="button" class="btn btn-primary btn-circle"><?php
 								$f3 =$sr - $csr;
 								if($f3 <=0 )
@@ -383,7 +383,7 @@ if(!isset($_SESSION["user"]))
 								?> </button></td> 
 							</tr>
 							<tr>
-								<td><b>Deluxe Room</b>	 </td>
+								<td><b>Kost Exclusive Isian (KM dalam)</b>	 </td>
 								<td><button type="button" class="btn btn-primary btn-circle"><?php 
 								
 								$f4 =$dr - $cdr; 
@@ -468,20 +468,20 @@ if(!isset($_SESSION["user"]))
 									
 								if($f1=="NO" )
 								{
-									echo "<script type='text/javascript'> alert('Sorry! Not Available Superior Room ')</script>";
+									echo "<script type='text/javascript'> alert('Sorry! Not Available Kost Keluarga / Pasutri Lengkap')</script>";
 								}
 								else if($f2 =="NO")
 									{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Guest House')</script>";
+										echo "<script type='text/javascript'> alert('Sorry! Not Available Kost Campur (2 Bed)')</script>";
 										
 									}
 									else if ($f3 == "NO")
 									{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Single Room')</script>";
+										echo "<script type='text/javascript'> alert('Sorry! Not Available Kost Kosongan (KM dalam)')</script>";
 									}
 										else if($f4=="NO")
 										{
-										echo "<script type='text/javascript'> alert('Sorry! Not Available Deluxe Room')</script>";
+										echo "<script type='text/javascript'> alert('Sorry! Not Available Kost Exclusive Isian (KM dalam)')</script>";
 										}
 										
 										else if( mysqli_query($con,$urb))
@@ -489,20 +489,20 @@ if(!isset($_SESSION["user"]))
 												//echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
 												//echo "<script type='text/javascript'> window.location='home.php'</script>";
 												 $type_of_room = 0;       
-														if($troom=="Superior Room")
+														if($troom=="Kost Keluarga / Pasutri Lengkap")
 														{
 															$type_of_room = 320;
 														
 														}
-														else if($troom=="Deluxe Room")
+														else if($troom=="Kost Exclusive Isian (KM dalam)")
 														{
 															$type_of_room = 220;
 														}
-														else if($troom=="Guest House")
+														else if($troom=="Kost Campur (2 Bed)")
 														{
 															$type_of_room = 180;
 														}
-														else if($troom=="Single Room")
+														else if($troom=="Kost Kosongan (KM dalam)")
 														{
 															$type_of_room = 150;
 														}

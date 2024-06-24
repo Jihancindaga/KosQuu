@@ -19,7 +19,7 @@ $rre=mysqli_query($con,$rsql);
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUNRISE HOTEL</title>
+    <title>KosQu</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -164,7 +164,7 @@ $rre=mysqli_query($con,$rsql);
 										while($row= mysqli_fetch_array($re))
 										{
 												$id = $row['type'];
-											if($id == "Superior Room") 
+											if($id == "Kost Keluarga / Pasutri Lengkap") 
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-blue'>
@@ -179,7 +179,7 @@ $rre=mysqli_query($con,$rsql);
 													</div>
 												</div>";
 											}
-											else if ($id == "Deluxe Room")
+											else if ($id == "Kost Exclusive Isian (KM dalam)")
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-green'>
@@ -195,7 +195,7 @@ $rre=mysqli_query($con,$rsql);
 												</div>";
 											
 											}
-											else if($id =="Guest House")
+											else if($id =="Kost Campur (2 Bed)")
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-brown'>
@@ -211,7 +211,7 @@ $rre=mysqli_query($con,$rsql);
 												</div>";
 											
 											}
-											else if($id =="Single Room")
+											else if($id =="Kost Kosongan (KM dalam)")
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-red'>
